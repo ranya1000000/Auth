@@ -40,45 +40,70 @@
     this.setInputs({value: e.target.value});
   }
 
+//signup.js
+  <div>
+      <form className="form"  onSubmit={handleSubmit}>
+        <Box
+          marginLeft="60%"
+          marginRight="auto"
+          marginTop="70px"
+          width={300}
+          display="flex"
+          flexDirection="column"
+          justifyContent="center"
+        >
+      
+          <Typography  variant="h5" > Create your account </Typography>
+
+          
+              
+            <TextField name="name" onChange={handleChange}  value={inputs.name} variant="outlined" placeholder="Name" margin="normal"/>
+            <TextField name="adress" onChange={handleChange} value={inputs.adress}variant="outlined" placeholder="Adress" margin="normal"/>
+            <TextField name="phoneNumber" onChange={handleChange} value={inputs.phoneNumber}variant="outlined" placeholder="PhoneNumber" margin="normal"/>
+            <TextField name="email" onChange={handleChange} type={"email"} value={inputs.email}variant="outlined" placeholder="Email" margin="normal"/>
+            <TextField name="password" onChange={handleChange} type={"password"} value={inputs.password}variant="outlined" placeholder="Password" margin="normal"/>
+                  <Button variant="contained" type="submit">
+                    Sign up
+                  </Button>
+          </Box>
+  
+        </form>
+        </div>
+
 */
 
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faYoutube,
-  faFacebook,
-  faTwitter,
-  faInstagram
-} from "@fortawesome/free-brands-svg-icons";
+/*{
 
-export default function SocialFollow() {
-  return (
-    <div className="social-container">
-      <h3>Contact Us</h3>
-      <a
-        href="https://www.youtube.com/c/jamesqquick"
-        className="youtube social"
-      >
-        <FontAwesomeIcon icon={faYoutube} size="2x" />
-      </a>
-      <a
-        href="https://www.facebook.com/learnbuildteach/"
-        className="facebook social"
-      >
-        <FontAwesomeIcon icon={faFacebook} size="2x" />
-      </a>
-      <a href="https://www.twitter.com/jamesqquick" className="twitter social">
-        <FontAwesomeIcon icon={faTwitter} size="2x" />
-      </a>
-      <a
-        href="https://www.instagram.com/learnbuildteach"
-        className="instagram social"
-      >
-        <FontAwesomeIcon icon={faInstagram} size="2x" />
-      </a>
-    </div>
-  );
-}
+
+<div class="">
+    
+    
+      
+      <a class="" href="#!" ><i class="fab fa-facebook-f"></i></a>
+
+      
+      <a class="" href="#!" ><i class="fab fa-twitter"></i></a>
+
+      
+      <a class="" href="#!" ><i class="fab fa-google"></i></a>
+
+      
+      <a class="" href="#!" ><i class="fab fa-instagram"></i></a>
+
+  
+      <a class="" href="#!" ><i class="fab fa-linkedin"></i></a>
+      
+      <a class="" href="#!" ><i class="fab fa-github"></i></a>
+    
+    
+  </div>
+
+
+
+
+
+
+}*/ 
 
 /*
 //css
@@ -148,37 +173,118 @@ a.instagram {
 
     // header bootstrop
 
-    /*{
+    
       <div class="navbar navbar-expand-md bg-dark navbar-dark text-white fixed-top">
       <div class="container">
-          <a href="#" class="navbar-brand">Bootstrap Tutorial</a>
+          <Link to="#" class="navbar-brand"> Import / Export </Link>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainmenu">
               <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="mainmenu">
               <ul class="navbar-nav ms-auto">
-                  <li class="nav-item">
-                  <a href="#hero" class="nav-link">Get Started</a>
-                  </li>
-                  <li class="nav-item">
-                  <a href="#features" class="nav-link">Features</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Learn</a>
-                      <ul class="dropdown-menu">
-                          <li><a href="#learn" class="dropdown-item">Learn Bootstrap</a></li>
-                          <li><a href="#next" class="dropdown-item">Where to go next</a></li>
-                      </ul>
-                  </li>
-                  <li class="nav-item">
-                  <a href="#faq" class="nav-link">Ask Me</a>
-                  </li>
-                  <li class="nav-item">
-                  <a href="./index-ar.html" class="nav-link">عربي</a>
-                  </li>
+                  <NavItem>
+                  <Link to="/#" class="nav-link">Get Started</Link>
+                  </NavItem>
+                  <NavItem>
+                  <Link to="/#" class="nav-link">Features</Link>
+                  </NavItem>
+                  <NavItem>
+                  <Link to="/#" class="nav-link"> Devenir Fournisseur </Link>
+                  </NavItem>
+                  <NavItem>
+                  <Link to="/#" class="nav-link"> Devenir Partenaire </Link>
+                  </NavItem>
+                  <NavItem>
+                  <Link to="/#" class="nav-link"> Contact </Link>
+                  </NavItem>
+                  <NavItem>
+                  <Link to="./index-ar.html" class="nav-link">عربي</Link>
+                  </NavItem>
               </ul>
           </div>
       </div>
   </div>
 
-    }*/
+    
+            {/*
+                      <div>
+              <AppBar position="sticky">
+                <Toolbar>
+                    <Typography > IMPORT / EXPORT </Typography>
+                          <Box sx={{marginLeft:"auto"}}>
+                            <Tabs 
+                                indicatorColor="secondary"
+                                onChange={(e, val) => setValue(val)}
+                                value={value}
+                                textColor="inherit"
+                                >
+                                <Tab to="/#" LinkComponent={Link} label="Home"/>
+                                <Tab to="/login" LinkComponent={Link} label="Login"/>
+                                <Tab to="/signup" LinkComponent={Link} label="Signup"/>
+                            </Tabs> 
+                          </Box>
+                </Toolbar>
+              </AppBar>
+          </div>
+          */}
+
+          <ColorModeContext.Provider value={colorMode}>
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <div className="app">
+              <Sidebar isSidebar={isSidebar} />
+              <main className="content">
+                <Topbar setIsSidebar={setIsSidebar} />
+                <Routes>
+                  <Route path="/" element={<Dashboard />} />
+                  
+                </Routes>
+              </main>
+            </div>
+          </ThemeProvider>
+        </ColorModeContext.Provider>
+
+      
+
+
+
+        //sidebar
+
+        /*
+        <Box position="absolute" bottom="2rem">
+        <Divider />
+        <FlexBetween textTransform="none" gap="1rem" m="1.5rem 2rem 0 3rem">
+          <Box
+            component="img"
+            alt="profile"
+            src={profileImage}
+            height="40px"
+            width="40px"
+            borderRadius="50%"
+            sx={{ objectFit: "cover" }}
+          />
+          <Box textAlign="left">
+            <Typography
+              fontWeight="bold"
+              fontSize="0.9rem"
+              sx={{ color: theme.palette.secondary[100] }}
+            >
+              {user.name}
+            </Typography>
+            <Typography
+              fontSize="0.8rem"
+              sx={{ color: theme.palette.secondary[200] }}
+            >
+              {user.occupation}
+            </Typography>
+          </Box>
+          <SettingsOutlined
+            sx={{
+              color: theme.palette.secondary[300],
+              fontSize: "25px ",
+            }}
+          />
+        </FlexBetween>
+      </Box>
+        
+        */

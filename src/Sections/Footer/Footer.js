@@ -1,40 +1,16 @@
-import './Footer.css'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faYoutube,
-  faFacebook,
-  faTwitter,
-  faInstagram
-} from "@fortawesome/free-brands-svg-icons";
+import React from 'react'
 
 const Footer = () => {
-  return(
-    <div>
-    <h3>Contact Us</h3>
-    <a
-      href="https://www.youtube.com/c/jamesqquick"
-      className="youtube social"
-    >
-      <FontAwesomeIcon icon={faYoutube} size="2x" />
-    </a>
-    <a
-      href="https://www.facebook.com/learnbuildteach/"
-      className="facebook social"
-    >
-      <FontAwesomeIcon icon={faFacebook} size="2x" />
-    </a>
-    <a href="https://www.twitter.com/jamesqquick" className="twitter social">
-      <FontAwesomeIcon icon={faTwitter} size="2x" />
-    </a>
-    <a
-      href="https://www.instagram.com/learnbuildteach"
-      className="instagram social"
-    >
-      <FontAwesomeIcon icon={faInstagram} size="2x" />
-    </a>
-    </div>
+  return (
+    <>    
+          <div className="row align-items-md-end py-5 footer-pos">
+            <div className="col-md mb-3 mb-md-0">
+              <p className="text-dark mb-0">© Copyright ©2023 All rights reserved.</p>
+            </div>
 
-  ) 
-
+          </div> 
+    </>
+  )
 }
+
 export default Footer

@@ -2,9 +2,11 @@
 
 const Welcom = () => {
   return (
+    <section>
     <div>
-      <h1> Hola </h1>
+      <h1> welcome here  </h1>
     </div>
+    </section>
   )
 }
 

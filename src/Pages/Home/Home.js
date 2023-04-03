@@ -1,10 +1,16 @@
 import './Home.css'
-//import Main from '../../Sections/index
+import {Hero,Services,Features} from '../../Sections/index'
+
 const Home = () => {
-  return (
-    <div>
-    </div>
-  )
+
+    return (
+      
+        <>
+          <Hero />
+          <Features />
+          <Services />
+        </>
+      )
 }
 
 export default Home
